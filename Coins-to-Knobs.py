@@ -1,8 +1,3 @@
-import os
-def rest():
-    os.system('cls')
-    script_name = os.path.basename(__file__)
-    os.system(script_name)
 def convert(c, k):
     k = int(0)
     c = int(c)
@@ -17,7 +12,7 @@ def convert(c, k):
         else:
             print(c + " coins will give you " + k + " extra knobs")
     input("press enter to close program")
-    rest()
+    quit()
 def retrycoins():
     print("You must enter a number")
     getcoins("coins")
