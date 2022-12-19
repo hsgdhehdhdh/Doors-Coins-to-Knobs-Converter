@@ -3,16 +3,10 @@ def rest():
     os.system('cls')
     script_name = os.path.basename(__file__)
     os.system(script_name)
-def convert(c, k, ki, kf):
-    ki = int(0)
-    kf = int(0)
+def convert(c, k):
     k = int(0)
     c = int(c)
-    k = int(c) / int(20)
-    ki = int(c) // int(20)
-    kf = k - ki
-    if "0.5" in str(kf):
-        k = int(ki) + int(1)
+    k = int(c) // int(20)
     k = str(k)
     c = str(c)
     if int(k) == 1:
@@ -22,7 +16,7 @@ def convert(c, k, ki, kf):
             print(c + " coins will give you no extra knobs")
         else:
             print(c + " coins will give you " + k + " extra knobs")
-    input("press enter to restart")
+    input("press enter to close program")
     rest()
 def retrycoins():
     print("You must enter a number")
@@ -31,7 +25,7 @@ def getcoins(c):
     c = input("How many coins do you have?: ")
     if c.isnumeric() == True:
         c = int(c)
-        convert(c, 0, 0, 0)
+        convert(c, 0)
     else:
         if c.isnumeric() == False:
             retrycoins()
